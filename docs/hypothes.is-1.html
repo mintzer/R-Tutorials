@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Zotero | Open tools for writing open interactive textbooks (and more)</title>
+  <title>Chapter 5 Hypothes.is | Open tools for writing open interactive textbooks (and more)</title>
   <meta name="description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Zotero | Open tools for writing open interactive textbooks (and more)" />
+  <meta property="og:title" content="Chapter 5 Hypothes.is | Open tools for writing open interactive textbooks (and more)" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="CrumpLab/OER_bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Zotero | Open tools for writing open interactive textbooks (and more)" />
+  <meta name="twitter:title" content="Chapter 5 Hypothes.is | Open tools for writing open interactive textbooks (and more)" />
   
   <meta name="twitter:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hypothes.is-1.html"/>
-<link rel="next" href="shiny.html"/>
+<link rel="prev" href="github-1.html"/>
+<link rel="next" href="zotero-1.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -287,78 +287,67 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="zotero-1" class="section level1" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Zotero</h1>
-<p><a href="https://www.zotero.org">Zotero</a> is a free, cross-platform tool to help you collect, organize, cite, and share your research sources. Zotero is similar to Mendeley or EndNote.</p>
-<p>The purpose of this chapter is to show how Zotero can be used as a reference manager to allow you to cite works in your book, and automatically compile bibliographies or reference sections. The bookdown package uses Latex bibliography files to generate citations and create bibliographies. These .bib files are text-based files with a specific syntax for coding the relevant information in a citation. Each citation in a .bib file has an associated key that is inserted into an Rmarkdown document to generate a citation. We will use Zotero to avoid writing our own .bib from scratch. Instead, there are convenient methods for populating Zotero with a database of references, and for compiling a .bib file from a Zotero databse that can be used in bookdown.</p>
-<div id="getting-started-1" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Getting Started</h2>
+<div id="hypothes.is-1" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Hypothes.is</h1>
+<p><a href="https://web.hypothes.is">Hypothes.is</a> is a web-browser add-on for annotating the web via inline commenting. This allows anyone to select a snippet of text in a web-browser and then post a comment about the selected text. Annotations can be made publicly or privately. All public annotations can be viewed by anyone else running hypothesis on the same website. Using Hypothesis with your web-book allows you to engage students in interacting with the textbook by allowing them to contribute to content generation (by posting new content), or content revision (by tagging sections in need of revision).</p>
+<p>If you publish your bookdown book as a webpage, then you anyone with Hypothes.is can use it to annotate the textbook.</p>
+<div id="a-case-study-example" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> A case study example</h2>
+<p>I recently compiled a <a href="http://crumplab.github.io/ResearchMethods/">Research Methods in Psychology textbook</a> using the tools described in this tutorial. The landing page describes how Hypothes.is can be used in conjunction with the textbook.</p>
+<p>In class I assigned students the task of downloading Hypothes.is, creating a Hypothes.is account, and then throughout the course gave them various assignments where they were responsible for annotating parts of the textbook.</p>
+<p>For example, in one assignment I had students annotate sections of the textbook that were in need of improvement. This allows students to participate in content revision as they read the textbook. Other assignments could include focused online discussion about textbook content using annotations, or using annotations as a way for students to add content to the textbook.</p>
+</div>
+<div id="hypothesisr-1" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> hypothesisr</h2>
+<p><a href="https://github.com/mdlincoln/hypothesisr">hypothesisr</a> is an r package for scraping annotation data collected through the hypothesis app. All public annotations submitted through hypothesis to any website are publically available for download. As a result, the hypothesisr package can be used to download and process the annotations submitted to your website.</p>
+</div>
+<div id="hypothesis-explorer" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Hypothesis Explorer</h2>
+<p>As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository, <a href="https://github.com/CrumpLab/hypothesis_explorer">https://github.com/CrumpLab/hypothesis_explorer</a></p>
+<div id="web-based-version" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Web-based version</h3>
+<p>A web-based version of the app can be accessed here: <a href="https://hypothesis-explorer.herokuapp.com">https://hypothesis-explorer.herokuapp.com</a>. Note the website currently times out after 55 seconds of inactivity. Reload the page to restart the app. This web-version is currently in beta testing.</p>
+</div>
+<div id="running-the-app-locally" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Running the app locally</h3>
+<p>To run this app you need to have R and R-Studio installed on your computer. You will also need to have downloaded the Shiny and hypothesisr packages. You can run the app by either of the following methods</p>
 <ol style="list-style-type: decimal">
-<li>Create an account with <a href="https://www.zotero.org">Zotero</a>, click register in the top-right corner</li>
-<li><a href="https://www.zotero.org/download/">Download</a> the Zotero Desktop app</li>
-<li><a href="https://www.zotero.org/download/">Download</a> the Zotero Connector extension for your web-browser</li>
+<li><p>You can download the hypothesis_explorer repository as a .zip file, then open the server.r, or ui.r files in R-studio and click run-app</p></li>
+<li><p>You can have R-studio automatically download and the run app using by entering the following in the command line</p></li>
 </ol>
-<p>Zotero operates on the cloud as well as on your desktop. You can connect your online Zotero account with your desktop app in the preferences.</p>
+<p><code>shiny::runGitHub('hypothesis_explorer', 'CrumpLab')</code></p>
 </div>
-<div id="populating-zotero-with-references" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Populating Zotero with references</h2>
-<p>There are multiple ways to import references into Zotero. In the Zotero desktop app you can create folders to organize your references.</p>
-<div id="drag-and-drop-.pdfs" class="section level3" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Drag and Drop .pdfs</h3>
+</div>
+<div id="downloading-annotations" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Downloading annotations</h2>
+<p>The Hypothesis Explorer app currently implements two main functions: <strong>downloading</strong> and <strong>displaying/searching</strong> parts of the publicly avialable Hypothes.is annotation database.</p>
+<p><strong>Download the annotation database associated with a website</strong>: Type in the name of the website in the search bar. To see an example, enter “crumplab” into the website search and click the download button.</p>
+<p><strong>NOTE OF CAUTION</strong> We use the hypothesisr package to scrape parts of the entire Hypothes.is annotation database. As a result, there are some nuances in searching for particular websites that may cause you to accidentally download all of the annotations to a global domain rather than to a particular website.</p>
+<p>For example, I have two web-books published on my github domain, these are:</p>
 <ol style="list-style-type: decimal">
-<li>Create a new folder and name it</li>
-<li>Drag and drop .pdfs into the folder</li>
-<li>Highlight the .pdfs, then right-click, and choose “retrieve metadata for pdf.”</li>
-<li>For most journal articles, Zotero will be able to automatically find the citation information for your .pdf. This will convert the .pdf into a Zotero citation that includes both the citation information, as well as the .pdf</li>
+<li><a href="https://www.crumplab.github.io/ResearchMethods" class="uri">https://www.crumplab.github.io/ResearchMethods</a></li>
+<li><a href="https://www.crumplab.github.io/programmingforpsych" class="uri">https://www.crumplab.github.io/programmingforpsych</a></li>
 </ol>
+<p>I am interested in using the Shiny app to look at only the annotations associated with these two websites. Using “crumplab” as the website will download all of the annotations associated with all subdomains on the site, so it will download annotations for both textbooks. On the other hand, including global domain information by searching “crumplab.github.io” will cause an attempt to download all annotations associated with the entire github domain, which will cause the Shiny app to crash.</p>
 </div>
-<div id="import-citations-and-pdfs-from-the-web" class="section level3" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> Import citations and pdfs from the web</h3>
-<ol style="list-style-type: decimal">
-<li>Ensure that your Desktop app is open, and that you have installed the Zotero plugin for your web-browser</li>
-<li>Use google scholar to search for an article</li>
-<li>Click the Zotero button in your web-browser</li>
-<li>You should see a list of all of the articles on the google scholar page.</li>
-<li>Click any or all the articles you want to import, then import them</li>
-<li>Zotero will download the citation information along with any associated .pdf to the current folder that is open in the Zotero desktop app.</li>
-</ol>
-<p>Zotero is fairly flexible, so the above process will generally work when you are accessing many different databases, and journal web-pages for specific articles.</p>
+<div id="viewing-the-annotations-search-and-subset-the-database" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Viewing the annotations Search and subset the database</h2>
+<p>Hypothesis explorer should automatically download any annotations associated with the website that you entered. At the moment, we have only tested this for websites built with github pages.</p>
+<p>After the annotation database has been downloaded the two viewable tabs “Summary,” and “Data” will be autopopulated. The Summary tab gives an overview of the top annotated documents, pages, tags and users. The Data tab presents the entire database.</p>
+<div id="viewing-all-the-variables-in-the-database" class="section level3" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Viewing all the variables in the database</h3>
+<p>The left-hand panel includes a “Variables (in Data View)” text box. Click into the box to see all of the names of each variable (column names) in the database. Clicking one of the variable names will add it to the list, and automatically display the content of that column in the database viewer. Likewise, deleting variable names will hide those columns from being displayed.</p>
 </div>
-<div id="a-note-of-caution" class="section level3" number="6.2.3">
-<h3><span class="header-section-number">6.2.3</span> A note of caution</h3>
-<p>The citation information that Zotero downloads is sometimes inaccurate. Be sure to check the fields for each of your citations to ensure they are accurate. For example, page ranges are often missing.</p>
+<div id="subsetting-the-data" class="section level3" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Subsetting the data</h3>
+<p>For quickly collapsing aspects of the data by row information, we have four subsetting operations, for displaying only annotations associated with particular documents (e.g., entire books), pages (chapters within a book), tags (associated with each annotation), and users.</p>
 </div>
-</div>
-<div id="generating-a-.bib-file" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Generating a .bib file</h2>
-<ol style="list-style-type: decimal">
-<li>Right-click a Zotero folder</li>
-<li>Choose “Export Collection”</li>
-<li>Choose “Bibtex”</li>
-<li>Save the file</li>
-<li>Copy the file into the folder for your bookdown project</li>
-<li>add the file to the bibliography line in the Index.Rmd file.</li>
-</ol>
-</div>
-<div id="citing-references-in-an-rmarkdown-file" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Citing references in an RMarkdown file</h2>
-<p>Citations are add using the following format <code>@citationkey</code>, or <code>[@citationkey]</code> to place the author,year citation in parentheses. The citation key name is listed for each citation in the bib file. Here are a couple of links with some additional examples: <a href="https://bookdown.org/yihui/bookdown/citations.html">examples from bookdown</a>, and examples from <a href="http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">RMarkdown</a>.</p>
-<p>The source code for this book contains two .bib files: book.bib and packages.bib. Each citation in those files has an associated citation key. Here is an example of citing the bookdown package <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>. This is an example of citing R-core team <span class="citation">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2016</a>)</span></p>
-<div id="cite-while-you-write" class="section level3" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Cite while you write</h3>
-<p>A minor inconvenience when using .bib for citations in Rmarkdown is that you have to know the citation key, and these are easy to forget. One option is to load up your .bib file, then search through it to find the citation key.</p>
-<p>Another option is to download and install the <code>citr</code> package. Once this package is installed, you can use its cite while your write feature. Click the tools menu, addins, then, insert citations. This will open up a window showing all of the citations in your bib files. You can click multiple citations, and then insert the citation keys into your Rmarkdown document. This is convenient method for quickly finding needed citation keys. I recommend first openining the index.rmd file (which points to your .bib files), and then opening the insert citations tools; this will allow the tool to find your .bib files. After this point, you should be able to use the tool when you are working within .Rmd files for each chapter.</p>
+<div id="voting-feature" class="section level3" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> Voting feature</h3>
+<p>When a user submits an annotation, other users can post comments underneath the annotation. For example, if a student highlights a section of the textbook and comments that this section should be improved, another student could reply to the original comment. We have implemented a rudimentary comment voting system using these features of hypothes.is. For example, up/down style voting can be implemented by instructing users to vote by using the reply feature. Specifically, up votes can be registered by replying with a numeric value of 1, and down votes can be registered by replying with a numeric value of -1.</p>
+<p>Hypothesis Explorer automatically looks for any child posts that contain 1s or -1s, counts the total vote for each parent comment, and then displays the count in a column variable called “votes.”</p>
 
 </div>
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-R-base" class="csl-entry">
-R Core Team. 2016. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
-<div id="ref-xie2015" class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
 </div>
 </div>
             </section>
@@ -366,8 +355,8 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
           </div>
         </div>
       </div>
-<a href="hypothes.is-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="shiny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="github-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="zotero-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -398,7 +387,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-Zotero.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-Hypothesis.Rmd",
 "text": "Edit"
 },
 "history": {
