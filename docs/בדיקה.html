@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 7 Shiny | מדריך לשפת R</title>
+  <title>פרק 2 בדיקה | מדריך לשפת R</title>
   <meta name="description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 7 Shiny | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 2 בדיקה | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 7 Shiny | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 2 בדיקה | מדריך לשפת R" />
   
   <meta name="twitter:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="zotero.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="סקירה-כללית.html"/>
+<link rel="next" href="bookdown.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -267,25 +267,49 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="shiny" class="section level1" number="7">
-<h1><span class="header-section-number">פרק 7</span> Shiny</h1>
-<p><a href="https://shiny.rstudio.com">Shiny</a> is an R package for creating a web site to interact with R. For example, a website could include various widgets for user input. User input data gets sent to a server running R, which then executes R code. Output from R can be sent back to the webpage in the form of data tables and graphs. A working example using the default shiny app available in R-studio is presented below. Note the shiny app will only display in the web-book version of this tutorial, and not the .pdf or epub versions.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="shiny.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_app</span>(<span class="st">&quot;https://shiny-crump-test.herokuapp.com&quot;</span>, </span>
-<span id="cb5-2"><a href="shiny.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="st">&quot;600px&quot;</span>)</span></code></pre></div>
-<iframe src="https://shiny-crump-test.herokuapp.com?showcase=0" width="672" height="600px" data-external="1">
-</iframe>
-<p>In the above example, the shiny app has loaded a dataset into R and plotted a histogram. The sidepanel contains a scrollbar that allows a user to change the bin-size of the histogram. When the scrollbar is moved the new bin-size settings are sent to the server, R recomputes the histogram, and the website dynamically shows a histogram with new bin-sizes.</p>
-<p>This example shiny app is running as a standalone website, but it has been embedded inside the web-book <a href="https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html">see the example from bookdown for more info</a></p>
-<div id="sharing-shiny-apps" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Sharing Shiny Apps</h2>
-<p>Shiny apps come with a few caveats, including learning how to program in R, learning how to program reactive expressions in Shiny (<a href="https://shiny.rstudio.com/tutorial/">lots of good tips here</a>, and <a href="https://shiny.rstudio.com/articles/">here</a>), and then figuring out how to host the Shiny app over the web.</p>
-<p>Shiny apps can be shared without a web server. For example, the shiny app in this repository <a href="https://github.com/CrumpLab/experimentsimulator_ttest">https://github.com/CrumpLab/experimentsimulator_ttest</a> can be downloaded and run directly in R-studio. However, in this case, the shiny app is run locally and can not be embedded in a web-book.</p>
-<p>Shiny offers free and paid services for <a href="https://www.shinyapps.io">hosting Shiny apps on their servers</a>. If you deploy a Shiny app using this method, then simply place the url for your shiny app into the embedding code (see the raw .Rmd file for this chapter see to how the above shiny app was embedded into this page). It is also possible to run your own Shiny server, or to use other free or paid cloud-computing services to run Shiny apps.</p>
+<div id="בדיקה" class="section level1 rtl" number="2">
+<h1><span class="header-section-number">פרק 2</span> בדיקה</h1>
 </div>
-<div id="a-minimal-working-example-using-heroku" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> A minimal working example using Heroku</h2>
-<p><a href="https://www.heroku.com">Heroku</a> is a flexible and free (with paid options) cloud-computing service that can be used to serve Shiny apps.</p>
-<p>This repository shows an example of configuring Heroku to run an R shiny app: <a href="https://github.com/CrumpLab/testShinyHeroku">https://github.com/CrumpLab/testShinyHeroku</a></p>
+<style>.rtl { direction:rtl;}</style>
+<div id="quick-start-steps" class="section level2 rtl" number="2.1">
+<h2><span class="header-section-number">2.1</span> Quick start steps</h2>
+</div>
+<ol style="list-style-type: decimal">
+<li>Download and install <a href="https://www.r-project.org">R</a> for your platform</li>
+<li>Download and install <a href="https://www.rstudio.com">R-Studio</a> for your platform (R must be installed first)</li>
+<li>Open R-studio</li>
+<li>Open a new RMarkdown document, compile it using the knit button.</li>
+</ol>
+<div id="r-markdown" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> R Markdown</h2>
+<p>You can open a new R Markdown (.rmd) file from Rstudio through the file menu (New File -&gt; R markdown…), or by clicking the green plus sign icon in the top left-hand corner of R-studio, and choosing R Markdown. This will open a window allowing you to name your new document, and then will open the new R Markdown document in the R-studio text editor. The new document shows some example syntax for writing in R Markdown. You can compile the document to see what it will look like as a .pdf or website by clicking the <strong>Knit</strong> button.</p>
+<p>R Markdown offers a convenient way to create content in plain-text, and then display the content as a .pdf or web-page. R Markdown separates content from style. In a typical word-processor, like Microsoft Word, an author formats the style of the content as they create it, the two are bound together. In an R Markdown document the content is written in plain text without any styling. In a second step, the R Markdown document is compiled to display the content in a particular style. This tutorial uses the styles available in the <a href="https://bookdown.org/yihui/bookdown/">bookdown</a> package. There are other styles available, and you can create and modify your own styles.</p>
+<p>R Markdown is commonly used to create notebooks for the results of statistical analysis in R. R Markdown allows an author to write sections of text, together with sections of R code. When the document is compiled, it is displayed as a formatted document with sections of headers and text, interspersed with sections of the R code used to run analyses, along with the output of the analyses. For example, below is a snippet of R code that computes and then displays the mean for the set of numbers 1 to 10.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="בדיקה.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## [1] 5.5</code></pre>
+<p>Although reporting statistical analyses may be the most common use of R Markdown, the framework can also be used to build books, using the <a href="https://bookdown.org/yihui/bookdown/">bookdown</a> package.</p>
+בדיקה שזה עובד כמו שצריך
+</div>
+</div>
+<div id="r-markdown-tips" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> R Markdown tips</h2>
+<p>I recommend looking at examples of .rmd files to see how they work. For example, all of the chapters in this tutorial are written in R Markdown using .rmd files. So, you can view the source code for each chapter by opening the .rmd file corresponding to each chapter. You will find the syntax to be fairly basic. Chapter headings are lines preceded by a #. Section headers, and sub, or sub-sub headers, are lines preceded by ##, ###, or ####. Paragraphs are new lines with text. You will also see how to insert hyperlinks to websites, as well as insert graphics.</p>
+<div id="inserting-graphics" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Inserting Graphics</h3>
+<p>In the repository for this book, you will find a Figures file. You can place .png and .pdf files in this folder. Then, to insert a graphic you create a short R code snippet, and point R toward the location of the file. See the Figure 1 example in the Overview.Rmd file.</p>
+</div>
+<div id="inserting-references" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Inserting References</h3>
+<p>See the chapter on Zotero.</p>
+</div>
+<div id="links-for-using-r-markdown" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Links for using R Markdown</h3>
+<p>Everything you ever wanted to know about R Markdown is here, in the recent <a href="https://bookdown.org/yihui/rmarkdown/">Definitive Guide to R Markdown</a></p>
+<ol style="list-style-type: decimal">
+<li>The R-studio website has in-depth tutorials on using R Markdown, available <a href="http://rmarkdown.rstudio.com/lesson-1.html">here</a>.</li>
+<li><a href="http://rmarkdown.rstudio.com/lesson-15.html">Cheatsheet for R Markdown</a></li>
+<li>In the Help menu of R-Studio, you can also find cheetsheats and formatting guides for using R Markdown.</li>
+</ol>
 
 </div>
 </div>
@@ -294,8 +318,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="zotero.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="סקירה-כללית.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bookdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -326,7 +350,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-Shiny.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-R.Rmd",
 "text": "Edit"
 },
 "history": {

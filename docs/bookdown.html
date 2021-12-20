@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 7 Shiny | מדריך לשפת R</title>
+  <title>פרק 3 Bookdown | מדריך לשפת R</title>
   <meta name="description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 7 Shiny | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 3 Bookdown | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 7 Shiny | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 3 Bookdown | מדריך לשפת R" />
   
   <meta name="twitter:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="zotero.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="בדיקה.html"/>
+<link rel="next" href="github.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -267,25 +267,32 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="shiny" class="section level1" number="7">
-<h1><span class="header-section-number">פרק 7</span> Shiny</h1>
-<p><a href="https://shiny.rstudio.com">Shiny</a> is an R package for creating a web site to interact with R. For example, a website could include various widgets for user input. User input data gets sent to a server running R, which then executes R code. Output from R can be sent back to the webpage in the form of data tables and graphs. A working example using the default shiny app available in R-studio is presented below. Note the shiny app will only display in the web-book version of this tutorial, and not the .pdf or epub versions.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="shiny.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_app</span>(<span class="st">&quot;https://shiny-crump-test.herokuapp.com&quot;</span>, </span>
-<span id="cb5-2"><a href="shiny.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="st">&quot;600px&quot;</span>)</span></code></pre></div>
-<iframe src="https://shiny-crump-test.herokuapp.com?showcase=0" width="672" height="600px" data-external="1">
-</iframe>
-<p>In the above example, the shiny app has loaded a dataset into R and plotted a histogram. The sidepanel contains a scrollbar that allows a user to change the bin-size of the histogram. When the scrollbar is moved the new bin-size settings are sent to the server, R recomputes the histogram, and the website dynamically shows a histogram with new bin-sizes.</p>
-<p>This example shiny app is running as a standalone website, but it has been embedded inside the web-book <a href="https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html">see the example from bookdown for more info</a></p>
-<div id="sharing-shiny-apps" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Sharing Shiny Apps</h2>
-<p>Shiny apps come with a few caveats, including learning how to program in R, learning how to program reactive expressions in Shiny (<a href="https://shiny.rstudio.com/tutorial/">lots of good tips here</a>, and <a href="https://shiny.rstudio.com/articles/">here</a>), and then figuring out how to host the Shiny app over the web.</p>
-<p>Shiny apps can be shared without a web server. For example, the shiny app in this repository <a href="https://github.com/CrumpLab/experimentsimulator_ttest">https://github.com/CrumpLab/experimentsimulator_ttest</a> can be downloaded and run directly in R-studio. However, in this case, the shiny app is run locally and can not be embedded in a web-book.</p>
-<p>Shiny offers free and paid services for <a href="https://www.shinyapps.io">hosting Shiny apps on their servers</a>. If you deploy a Shiny app using this method, then simply place the url for your shiny app into the embedding code (see the raw .Rmd file for this chapter see to how the above shiny app was embedded into this page). It is also possible to run your own Shiny server, or to use other free or paid cloud-computing services to run Shiny apps.</p>
+<div id="bookdown" class="section level1" number="3">
+<h1><span class="header-section-number">פרק 3</span> Bookdown</h1>
+<p><a href="https://bookdown.org/yihui/bookdown/">Bookdown</a> is an R package written by Yihui Xie. Bookdown is a tool for stitching together multiple R Markdown files into a whole book. Most impressive, is that the final product can rendered in multiple formats, including .pdf, epub, and as a web-page.</p>
+<div id="r-packages-and-installing-bookdown" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> R Packages and installing Bookdown</h2>
+<p>R is an open-source platform. Many developers create and share packages for accomplishing different tasks in R.</p>
+<p>Packages can be installed in R-Studio by clicking the packages tab in the lower right-hand window, and then clicking the Install button. If you know the name of the package you want to install, then type it in, and click install.</p>
+<p>To install bookdown, type bookdown into the textbox, make sure you have “install dependencies” clicked on, and then press install.</p>
+<p>The <strong>packages</strong> tab also shows all of the currently installed R packages on your system. These packages needed to be loaded, or turned on, in order to use them. You can do this by clicking on the checkmark box beside each package.</p>
+<p>You may into a situation where your R Markdown file does not compile, and you get a message saying that a particular package is required. Usually this can be resolved by installing the missing package, using the same method used to install the bookdown package.</p>
 </div>
-<div id="a-minimal-working-example-using-heroku" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> A minimal working example using Heroku</h2>
-<p><a href="https://www.heroku.com">Heroku</a> is a flexible and free (with paid options) cloud-computing service that can be used to serve Shiny apps.</p>
-<p>This repository shows an example of configuring Heroku to run an R shiny app: <a href="https://github.com/CrumpLab/testShinyHeroku">https://github.com/CrumpLab/testShinyHeroku</a></p>
+<div id="using-bookdown" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Using Bookdown</h2>
+<p>Yihui Xie has written a whole <a href="https://bookdown.org/yihui/bookdown/">tutorial book</a>, using bookdown, to describe how to use the bookdown package. Similarly, check out Yihui Xie’s <a href="https://bookdown.org/yihui/bookdown/get-started.html">minimal working example</a>, which contains all of the source code necessary to compile a barebones book.</p>
+<p>Similarly, this tutorial was written in bookdown, and is intended to be used as a starting point for you to create your own book.</p>
+</div>
+<div id="compiling-this-tutorial-using-bookdown." class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Compiling this tutorial using bookdown.</h2>
+<ol style="list-style-type: decimal">
+<li>Download the Github Repository for this tutorial as a .zip file here.</li>
+<li>Unzip the file somewhere on your computer.</li>
+<li>Open R-Studio</li>
+<li>Navigate to the tutorial folder using the Files tab</li>
+<li>Open the R Markdown file <strong>index.Rmd</strong> and click the button <strong>Build Book</strong> on the <strong>Build</strong> tab of RStudio (top right-hand corner).</li>
+</ol>
+<p>You can build the book as a .pdf, epub, or gitbook (renders as a web-page in the gitbook style). After you build the book, it should pop-up in a viewer screen.</p>
 
 </div>
 </div>
@@ -294,8 +301,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="zotero.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="בדיקה.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -326,7 +333,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-Shiny.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-Bookdown.Rmd",
 "text": "Edit"
 },
 "history": {

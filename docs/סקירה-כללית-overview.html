@@ -5,20 +5,20 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>מדריך לשפת R</title>
-  <meta name="description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
+  <meta name="description" content="מדריך" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
+  <meta property="og:description" content="מדריך" />
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="מדריך לשפת R" />
   
-  <meta name="twitter:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
+  <meta name="twitter:description" content="מדריך" />
   
 
 <meta name="author" content="שי מינצר" />
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="סקירה-כללית.html"/>
+
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -150,17 +150,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Open tools for writing open interactive textbooks (and more)</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>הקדמה</a></li>
-<li class="chapter" data-level="1" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html"><i class="fa fa-check"></i><b>1</b> סקירה כללית</a>
+<li class="chapter" data-level="1" data-path="01-Overview.html"><a href="#סקירה-כללית-overview"><i class="fa fa-check"></i><b>1</b> סקירה כללית {overview}</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html#מה-זה-r"><i class="fa fa-check"></i><b>1.1</b> מה זה R?</a></li>
-<li class="chapter" data-level="1.2" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html#r-studio"><i class="fa fa-check"></i><b>1.2</b> R-studio</a></li>
-<li class="chapter" data-level="1.3" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html#מה-יופיע-פה-במדריך"><i class="fa fa-check"></i><b>1.3</b> מה יופיע פה במדריך?</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="לולאות.html"><a href="לולאות.html"><i class="fa fa-check"></i><b>2</b> לולאות</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="לולאות.html"><a href="לולאות.html#לולאת-for"><i class="fa fa-check"></i><b>2.1</b> לולאת for</a></li>
-<li class="chapter" data-level="2.2" data-path="לולאות.html"><a href="לולאות.html#לולאת-while"><i class="fa fa-check"></i><b>2.2</b> לולאת while</a></li>
+<li class="chapter" data-level="1.1" data-path="01-Overview.html"><a href="#מה-זה-r"><i class="fa fa-check"></i><b>1.1</b> מה זה R?</a></li>
+<li class="chapter" data-level="1.2" data-path="01-Overview.html"><a href="#r-studio"><i class="fa fa-check"></i><b>1.2</b> R-studio</a></li>
+<li class="chapter" data-level="1.3" data-path="01-Overview.html"><a href="#מה-יופיע-פה-במדריך"><i class="fa fa-check"></i><b>1.3</b> מה יופיע פה במדריך?</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -187,9 +181,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="author"><em>שי מינצר</em></p>
 <p class="date"><em>2021: נערך לאחרונה ב - 2021-12-20</em></p>
 </div>
-<div id="הקדמה" class="section level1 unnumbered">
-<h1>הקדמה</h1>
+<div id="סקירה-כללית-overview" class="section level1" number="1">
+<h1><span class="header-section-number">פרק 1</span> סקירה כללית {overview}</h1>
+<div id="מה-זה-r" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> מה זה R?</h2>
+<p>R היא שפת תכנות בקוד פתוח
+דוגמא:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;hey&#39;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;hey&quot;</code></pre>
+</div>
+<div id="r-studio" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> R-studio</h2>
+<p><a href="https://www.rstudio.com">R-Studio</a> סביבת עבודה בקוד פתוח</p>
+</div>
+<div id="מה-יופיע-פה-במדריך" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> מה יופיע פה במדריך?</h2>
+<p>קטעי קוד מתעדכנים וכו’</p>
 
+</div>
 </div>
             </section>
 
@@ -197,7 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="סקירה-כללית.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -228,7 +237,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Overview.Rmd",
 "text": "Edit"
 },
 "history": {

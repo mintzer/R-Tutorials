@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>פרק 7 Shiny | מדריך לשפת R</title>
+  <title>פרק 5 Hypothes.is | מדריך לשפת R</title>
   <meta name="description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="פרק 7 Shiny | מדריך לשפת R" />
+  <meta property="og:title" content="פרק 5 Hypothes.is | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="פרק 7 Shiny | מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 5 Hypothes.is | מדריך לשפת R" />
   
   <meta name="twitter:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="zotero.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="github.html"/>
+<link rel="next" href="zotero.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -267,26 +267,67 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="shiny" class="section level1" number="7">
-<h1><span class="header-section-number">פרק 7</span> Shiny</h1>
-<p><a href="https://shiny.rstudio.com">Shiny</a> is an R package for creating a web site to interact with R. For example, a website could include various widgets for user input. User input data gets sent to a server running R, which then executes R code. Output from R can be sent back to the webpage in the form of data tables and graphs. A working example using the default shiny app available in R-studio is presented below. Note the shiny app will only display in the web-book version of this tutorial, and not the .pdf or epub versions.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="shiny.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_app</span>(<span class="st">&quot;https://shiny-crump-test.herokuapp.com&quot;</span>, </span>
-<span id="cb5-2"><a href="shiny.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="st">&quot;600px&quot;</span>)</span></code></pre></div>
-<iframe src="https://shiny-crump-test.herokuapp.com?showcase=0" width="672" height="600px" data-external="1">
-</iframe>
-<p>In the above example, the shiny app has loaded a dataset into R and plotted a histogram. The sidepanel contains a scrollbar that allows a user to change the bin-size of the histogram. When the scrollbar is moved the new bin-size settings are sent to the server, R recomputes the histogram, and the website dynamically shows a histogram with new bin-sizes.</p>
-<p>This example shiny app is running as a standalone website, but it has been embedded inside the web-book <a href="https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html">see the example from bookdown for more info</a></p>
-<div id="sharing-shiny-apps" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Sharing Shiny Apps</h2>
-<p>Shiny apps come with a few caveats, including learning how to program in R, learning how to program reactive expressions in Shiny (<a href="https://shiny.rstudio.com/tutorial/">lots of good tips here</a>, and <a href="https://shiny.rstudio.com/articles/">here</a>), and then figuring out how to host the Shiny app over the web.</p>
-<p>Shiny apps can be shared without a web server. For example, the shiny app in this repository <a href="https://github.com/CrumpLab/experimentsimulator_ttest">https://github.com/CrumpLab/experimentsimulator_ttest</a> can be downloaded and run directly in R-studio. However, in this case, the shiny app is run locally and can not be embedded in a web-book.</p>
-<p>Shiny offers free and paid services for <a href="https://www.shinyapps.io">hosting Shiny apps on their servers</a>. If you deploy a Shiny app using this method, then simply place the url for your shiny app into the embedding code (see the raw .Rmd file for this chapter see to how the above shiny app was embedded into this page). It is also possible to run your own Shiny server, or to use other free or paid cloud-computing services to run Shiny apps.</p>
+<div id="hypothes.is" class="section level1" number="5">
+<h1><span class="header-section-number">פרק 5</span> Hypothes.is</h1>
+<p><a href="https://web.hypothes.is">Hypothes.is</a> is a web-browser add-on for annotating the web via inline commenting. This allows anyone to select a snippet of text in a web-browser and then post a comment about the selected text. Annotations can be made publicly or privately. All public annotations can be viewed by anyone else running hypothesis on the same website. Using Hypothesis with your web-book allows you to engage students in interacting with the textbook by allowing them to contribute to content generation (by posting new content), or content revision (by tagging sections in need of revision).</p>
+<p>If you publish your bookdown book as a webpage, then you anyone with Hypothes.is can use it to annotate the textbook.</p>
+<div id="a-case-study-example" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> A case study example</h2>
+<p>I recently compiled a <a href="http://crumplab.github.io/ResearchMethods/">Research Methods in Psychology textbook</a> using the tools described in this tutorial. The landing page describes how Hypothes.is can be used in conjunction with the textbook.</p>
+<p>In class I assigned students the task of downloading Hypothes.is, creating a Hypothes.is account, and then throughout the course gave them various assignments where they were responsible for annotating parts of the textbook.</p>
+<p>For example, in one assignment I had students annotate sections of the textbook that were in need of improvement. This allows students to participate in content revision as they read the textbook. Other assignments could include focused online discussion about textbook content using annotations, or using annotations as a way for students to add content to the textbook.</p>
 </div>
-<div id="a-minimal-working-example-using-heroku" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> A minimal working example using Heroku</h2>
-<p><a href="https://www.heroku.com">Heroku</a> is a flexible and free (with paid options) cloud-computing service that can be used to serve Shiny apps.</p>
-<p>This repository shows an example of configuring Heroku to run an R shiny app: <a href="https://github.com/CrumpLab/testShinyHeroku">https://github.com/CrumpLab/testShinyHeroku</a></p>
+<div id="hypothesisr" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> hypothesisr</h2>
+<p><a href="https://github.com/mdlincoln/hypothesisr">hypothesisr</a> is an r package for scraping annotation data collected through the hypothesis app. All public annotations submitted through hypothesis to any website are publically available for download. As a result, the hypothesisr package can be used to download and process the annotations submitted to your website.</p>
+</div>
+<div id="hypothesis-explorer" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Hypothesis Explorer</h2>
+<p>As a part of this project, we have created a Shiny app that conveniently displays and manipulates hypothesis annotation databases in a website. The Shiny app is located in this github repository, <a href="https://github.com/CrumpLab/hypothesis_explorer">https://github.com/CrumpLab/hypothesis_explorer</a></p>
+<div id="web-based-version" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Web-based version</h3>
+<p>A web-based version of the app can be accessed here: <a href="https://hypothesis-explorer.herokuapp.com">https://hypothesis-explorer.herokuapp.com</a>. Note the website currently times out after 55 seconds of inactivity. Reload the page to restart the app. This web-version is currently in beta testing.</p>
+</div>
+<div id="running-the-app-locally" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Running the app locally</h3>
+<p>To run this app you need to have R and R-Studio installed on your computer. You will also need to have downloaded the Shiny and hypothesisr packages. You can run the app by either of the following methods</p>
+<ol style="list-style-type: decimal">
+<li><p>You can download the hypothesis_explorer repository as a .zip file, then open the server.r, or ui.r files in R-studio and click run-app</p></li>
+<li><p>You can have R-studio automatically download and the run app using by entering the following in the command line</p></li>
+</ol>
+<p><code>shiny::runGitHub('hypothesis_explorer', 'CrumpLab')</code></p>
+</div>
+</div>
+<div id="downloading-annotations" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Downloading annotations</h2>
+<p>The Hypothesis Explorer app currently implements two main functions: <strong>downloading</strong> and <strong>displaying/searching</strong> parts of the publicly avialable Hypothes.is annotation database.</p>
+<p><strong>Download the annotation database associated with a website</strong>: Type in the name of the website in the search bar. To see an example, enter “crumplab” into the website search and click the download button.</p>
+<p><strong>NOTE OF CAUTION</strong> We use the hypothesisr package to scrape parts of the entire Hypothes.is annotation database. As a result, there are some nuances in searching for particular websites that may cause you to accidentally download all of the annotations to a global domain rather than to a particular website.</p>
+<p>For example, I have two web-books published on my github domain, these are:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.crumplab.github.io/ResearchMethods" class="uri">https://www.crumplab.github.io/ResearchMethods</a></li>
+<li><a href="https://www.crumplab.github.io/programmingforpsych" class="uri">https://www.crumplab.github.io/programmingforpsych</a></li>
+</ol>
+<p>I am interested in using the Shiny app to look at only the annotations associated with these two websites. Using “crumplab” as the website will download all of the annotations associated with all subdomains on the site, so it will download annotations for both textbooks. On the other hand, including global domain information by searching “crumplab.github.io” will cause an attempt to download all annotations associated with the entire github domain, which will cause the Shiny app to crash.</p>
+</div>
+<div id="viewing-the-annotations-search-and-subset-the-database" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Viewing the annotations Search and subset the database</h2>
+<p>Hypothesis explorer should automatically download any annotations associated with the website that you entered. At the moment, we have only tested this for websites built with github pages.</p>
+<p>After the annotation database has been downloaded the two viewable tabs “Summary,” and “Data” will be autopopulated. The Summary tab gives an overview of the top annotated documents, pages, tags and users. The Data tab presents the entire database.</p>
+<div id="viewing-all-the-variables-in-the-database" class="section level3" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Viewing all the variables in the database</h3>
+<p>The left-hand panel includes a “Variables (in Data View)” text box. Click into the box to see all of the names of each variable (column names) in the database. Clicking one of the variable names will add it to the list, and automatically display the content of that column in the database viewer. Likewise, deleting variable names will hide those columns from being displayed.</p>
+</div>
+<div id="subsetting-the-data" class="section level3" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Subsetting the data</h3>
+<p>For quickly collapsing aspects of the data by row information, we have four subsetting operations, for displaying only annotations associated with particular documents (e.g., entire books), pages (chapters within a book), tags (associated with each annotation), and users.</p>
+</div>
+<div id="voting-feature" class="section level3" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> Voting feature</h3>
+<p>When a user submits an annotation, other users can post comments underneath the annotation. For example, if a student highlights a section of the textbook and comments that this section should be improved, another student could reply to the original comment. We have implemented a rudimentary comment voting system using these features of hypothes.is. For example, up/down style voting can be implemented by instructing users to vote by using the reply feature. Specifically, up votes can be registered by replying with a numeric value of 1, and down votes can be registered by replying with a numeric value of -1.</p>
+<p>Hypothesis Explorer automatically looks for any child posts that contain 1s or -1s, counts the total vote for each parent comment, and then displays the count in a column variable called “votes.”</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -294,8 +335,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="zotero.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="zotero.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -326,7 +367,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-Shiny.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-Hypothesis.Rmd",
 "text": "Edit"
 },
 "history": {

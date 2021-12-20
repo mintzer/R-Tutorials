@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>מדריך לשפת R</title>
+  <title>פרק 2 לולאות | מדריך לשפת R</title>
   <meta name="description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="מדריך לשפת R" />
+  <meta property="og:title" content="פרק 2 לולאות | מדריך לשפת R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mintzer/R-Tutorials" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="מדריך לשפת R" />
+  <meta name="twitter:title" content="פרק 2 לולאות | מדריך לשפת R" />
   
   <meta name="twitter:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="סקירה-כללית.html"/>
 
-<link rel="next" href="סקירה-כללית.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -182,22 +182,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">מדריך לשפת R</h1>
-<p class="author"><em>שי מינצר</em></p>
-<p class="date"><em>2021: נערך לאחרונה ב - 2021-12-20</em></p>
+<div id="לולאות" class="section level1" number="2">
+<h1><span class="header-section-number">פרק 2</span> לולאות</h1>
+<div id="לולאת-for" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> לולאת for</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="לולאות.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb3-2"><a href="לולאות.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb3-3"><a href="לולאות.html#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
 </div>
-<div id="הקדמה" class="section level1 unnumbered">
-<h1>הקדמה</h1>
+<div id="לולאת-while" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> לולאת while</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="לולאות.html#cb5-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb5-2"><a href="לולאות.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="sc">&lt;</span> <span class="dv">10</span>) {</span>
+<span id="cb5-3"><a href="לולאות.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span> (i)</span>
+<span id="cb5-4"><a href="לולאות.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb5-5"><a href="לולאות.html#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="סקירה-כללית.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="סקירה-כללית.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -228,7 +256,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-Loops.Rmd",
 "text": "Edit"
 },
 "history": {
