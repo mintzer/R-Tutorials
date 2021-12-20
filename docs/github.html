@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>פרק 4 Github | מדריך לשפת R</title>
+  <meta name="description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="פרק 4 Github | מדריך לשפת R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
+  <meta name="github-repo" content="mintzer/R-Tutorials" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="פרק 4 Github | מדריך לשפת R" />
+  
+  <meta name="twitter:description" content="A tutorial and working resources for writing open-source textbooks using open-source tools" />
+  
+
+<meta name="author" content="שי מינצר" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="bookdown.html"/>
+<link rel="next" href="hypothes.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79429674-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-79429674-2');
+</script>
+
+
+<script type="text/javascript">
+mattcrump=1;
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Open tools for writing open interactive textbooks (and more)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>הקדמה</a></li>
+<li class="chapter" data-level="1" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html"><i class="fa fa-check"></i><b>1</b> סקירה כללית</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html#מה-זה-r"><i class="fa fa-check"></i><b>1.1</b> מה זה R?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html#r-studio"><i class="fa fa-check"></i><b>1.1.1</b> R-studio</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="סקירה-כללית.html"><a href="סקירה-כללית.html#מה-יופיע-פה-במדריך"><i class="fa fa-check"></i><b>1.2</b> מה יופיע פה במדריך?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="בדיקה.html"><a href="בדיקה.html"><i class="fa fa-check"></i><b>2</b> בדיקה</a></li>
+<li class="chapter" data-level="2.1" data-path="בדיקה.html"><a href="בדיקה.html#quick-start-steps"><i class="fa fa-check"></i><b>2.1</b> Quick start steps</a></li>
+<li class="chapter" data-level="2.2" data-path="בדיקה.html"><a href="בדיקה.html#r-markdown"><i class="fa fa-check"></i><b>2.2</b> R Markdown</a></li>
+<li class="chapter" data-level="2.3" data-path="בדיקה.html"><a href="בדיקה.html#r-markdown-tips"><i class="fa fa-check"></i><b>2.3</b> R Markdown tips</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="בדיקה.html"><a href="בדיקה.html#inserting-graphics"><i class="fa fa-check"></i><b>2.3.1</b> Inserting Graphics</a></li>
+<li class="chapter" data-level="2.3.2" data-path="בדיקה.html"><a href="בדיקה.html#inserting-references"><i class="fa fa-check"></i><b>2.3.2</b> Inserting References</a></li>
+<li class="chapter" data-level="2.3.3" data-path="בדיקה.html"><a href="בדיקה.html#links-for-using-r-markdown"><i class="fa fa-check"></i><b>2.3.3</b> Links for using R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>3</b> Bookdown</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="bookdown.html"><a href="bookdown.html#r-packages-and-installing-bookdown"><i class="fa fa-check"></i><b>3.1</b> R Packages and installing Bookdown</a></li>
+<li class="chapter" data-level="3.2" data-path="bookdown.html"><a href="bookdown.html#using-bookdown"><i class="fa fa-check"></i><b>3.2</b> Using Bookdown</a></li>
+<li class="chapter" data-level="3.3" data-path="bookdown.html"><a href="bookdown.html#compiling-this-tutorial-using-bookdown."><i class="fa fa-check"></i><b>3.3</b> Compiling this tutorial using bookdown.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>4</b> Github</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="github.html"><a href="github.html#getting-started"><i class="fa fa-check"></i><b>4.1</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="github.html"><a href="github.html#make-an-account-with-github"><i class="fa fa-check"></i><b>4.1.1</b> Make an account with Github</a></li>
+<li class="chapter" data-level="4.1.2" data-path="github.html"><a href="github.html#install-github-desktop"><i class="fa fa-check"></i><b>4.1.2</b> Install Github Desktop</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="github.html"><a href="github.html#repository-workflow"><i class="fa fa-check"></i><b>4.2</b> Repository workflow</a></li>
+<li class="chapter" data-level="4.3" data-path="github.html"><a href="github.html#creating-a-new-repository-on-github.com"><i class="fa fa-check"></i><b>4.3</b> Creating a new repository on Github.com</a></li>
+<li class="chapter" data-level="4.4" data-path="github.html"><a href="github.html#cloning-a-copy-on-your-computer"><i class="fa fa-check"></i><b>4.4</b> Cloning a copy on your computer</a></li>
+<li class="chapter" data-level="4.5" data-path="github.html"><a href="github.html#make-changes-to-the-repository"><i class="fa fa-check"></i><b>4.5</b> Make changes to the repository</a></li>
+<li class="chapter" data-level="4.6" data-path="github.html"><a href="github.html#update-the-online-github-repository"><i class="fa fa-check"></i><b>4.6</b> Update the online github repository</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="hypothes.html"><a href="hypothes.html"><i class="fa fa-check"></i><b>5</b> Hypothes.is</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="hypothes.html"><a href="hypothes.html#a-case-study-example"><i class="fa fa-check"></i><b>5.1</b> A case study example</a></li>
+<li class="chapter" data-level="5.2" data-path="hypothes.html"><a href="hypothes.html#hypothesisr"><i class="fa fa-check"></i><b>5.2</b> hypothesisr</a></li>
+<li class="chapter" data-level="5.3" data-path="hypothes.html"><a href="hypothes.html#hypothesis-explorer"><i class="fa fa-check"></i><b>5.3</b> Hypothesis Explorer</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="hypothes.html"><a href="hypothes.html#web-based-version"><i class="fa fa-check"></i><b>5.3.1</b> Web-based version</a></li>
+<li class="chapter" data-level="5.3.2" data-path="hypothes.html"><a href="hypothes.html#running-the-app-locally"><i class="fa fa-check"></i><b>5.3.2</b> Running the app locally</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="hypothes.html"><a href="hypothes.html#downloading-annotations"><i class="fa fa-check"></i><b>5.4</b> Downloading annotations</a></li>
+<li class="chapter" data-level="5.5" data-path="hypothes.html"><a href="hypothes.html#viewing-the-annotations-search-and-subset-the-database"><i class="fa fa-check"></i><b>5.5</b> Viewing the annotations Search and subset the database</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="hypothes.html"><a href="hypothes.html#viewing-all-the-variables-in-the-database"><i class="fa fa-check"></i><b>5.5.1</b> Viewing all the variables in the database</a></li>
+<li class="chapter" data-level="5.5.2" data-path="hypothes.html"><a href="hypothes.html#subsetting-the-data"><i class="fa fa-check"></i><b>5.5.2</b> Subsetting the data</a></li>
+<li class="chapter" data-level="5.5.3" data-path="hypothes.html"><a href="hypothes.html#voting-feature"><i class="fa fa-check"></i><b>5.5.3</b> Voting feature</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i><b>6</b> Zotero</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="zotero.html"><a href="zotero.html#getting-started-1"><i class="fa fa-check"></i><b>6.1</b> Getting Started</a></li>
+<li class="chapter" data-level="6.2" data-path="zotero.html"><a href="zotero.html#populating-zotero-with-references"><i class="fa fa-check"></i><b>6.2</b> Populating Zotero with references</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="zotero.html"><a href="zotero.html#drag-and-drop-.pdfs"><i class="fa fa-check"></i><b>6.2.1</b> Drag and Drop .pdfs</a></li>
+<li class="chapter" data-level="6.2.2" data-path="zotero.html"><a href="zotero.html#import-citations-and-pdfs-from-the-web"><i class="fa fa-check"></i><b>6.2.2</b> Import citations and pdfs from the web</a></li>
+<li class="chapter" data-level="6.2.3" data-path="zotero.html"><a href="zotero.html#a-note-of-caution"><i class="fa fa-check"></i><b>6.2.3</b> A note of caution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="zotero.html"><a href="zotero.html#generating-a-.bib-file"><i class="fa fa-check"></i><b>6.3</b> Generating a .bib file</a></li>
+<li class="chapter" data-level="6.4" data-path="zotero.html"><a href="zotero.html#citing-references-in-an-rmarkdown-file"><i class="fa fa-check"></i><b>6.4</b> Citing references in an RMarkdown file</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="zotero.html"><a href="zotero.html#cite-while-you-write"><i class="fa fa-check"></i><b>6.4.1</b> Cite while you write</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>7</b> Shiny</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="shiny.html"><a href="shiny.html#sharing-shiny-apps"><i class="fa fa-check"></i><b>7.1</b> Sharing Shiny Apps</a></li>
+<li class="chapter" data-level="7.2" data-path="shiny.html"><a href="shiny.html#a-minimal-working-example-using-heroku"><i class="fa fa-check"></i><b>7.2</b> A minimal working example using Heroku</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">מדריך לשפת R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="github" class="section level1" number="4">
+<h1><span class="header-section-number">פרק 4</span> Github</h1>
+<p>To quote from wikipedia, “Github is a Web-based Git version control repository hosting service. It is mostly used for computer code.”— and I would add, many other things.</p>
+<p>The purpose of this chapter is to describe how Github can be used to serve your web-book (compiled using bookdown), and to share the source code so that others can duplicate and modify your book, or so that others can contribute content to your existing book.</p>
+<div id="getting-started" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Getting Started</h2>
+<div id="make-an-account-with-github" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Make an account with Github</h3>
+<p>To get started with <a href="https://github.com">Github</a> you need to create a free account. You should see a sign up option on the main page.</p>
+<p>Your account now consists of your profile page (where you can add information about yourself), and an empty list of repositories. Repositories are Github file folders. They can be purely cloud-based; for example, you can create a repository then add files to it through the web-based interface. You can also create a copy of each repository on your local computer, make changes to the repository on your local computer, and then merge those changes with the online repository.</p>
+</div>
+<div id="install-github-desktop" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Install Github Desktop</h3>
+<p>Github has provided a free and convenient tool for using your local computer to interface with the web-based version of Github. To use the tool, download and install the <a href="https://desktop.github.com">desktop app for Github</a>. Once the app is installed, make sure that you <a href="https://help.github.com/desktop/guides/getting-started-with-github-desktop/authenticating-to-github/">connect it to your Github account</a> so that you can access repositories that you create.</p>
+</div>
+</div>
+<div id="repository-workflow" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Repository workflow</h2>
+<p>We will use the following workflow:</p>
+<ol style="list-style-type: decimal">
+<li>Create a new empty repository on the Github Website</li>
+<li>Clone the repository to your local computer</li>
+<li>Add files to the repo on your local computer (work locally)</li>
+<li>Merge the files back to the Github Website (share final versions)</li>
+</ol>
+</div>
+<div id="creating-a-new-repository-on-github.com" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Creating a new repository on Github.com</h2>
+<ol style="list-style-type: decimal">
+<li>Log in to Github.com</li>
+<li>In the top right corner of the page, click the “+” icon</li>
+<li>Choose new repository</li>
+<li>Give it a short name</li>
+<li>You have a few other options that you can revisit later</li>
+<li>Click create repository</li>
+</ol>
+</div>
+<div id="cloning-a-copy-on-your-computer" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Cloning a copy on your computer</h2>
+<ol style="list-style-type: decimal">
+<li>Open the Github desktop app</li>
+<li>Login in to your Github account</li>
+<li>Choose the clone repository option</li>
+<li>Find the name of the repository you created on Github and select it. Github Desktop will now download the contents of the repository and save it locally (in the file folder of your choice) on your computer</li>
+</ol>
+</div>
+<div id="make-changes-to-the-repository" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Make changes to the repository</h2>
+<ol style="list-style-type: decimal">
+<li>If you are on a mac, choose “show in finder.”</li>
+<li>You can now edit any of the files locally</li>
+</ol>
+</div>
+<div id="update-the-online-github-repository" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Update the online github repository</h2>
+<ol style="list-style-type: decimal">
+<li>Any time you change a file, git will track all of the changes that you make</li>
+<li>To submit changes, choose the commit button</li>
+<li>All of your changes will now be uploaded to the online repository.</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="bookdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hypothes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-Github.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["R-Tutorials.pdf", "R-Tutorials.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
